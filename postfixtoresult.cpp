@@ -122,6 +122,9 @@ std::string opreatorHandle(std::vector<std::string> postfix){
             double d = std::stod(str);
             dStack.push(d);
         }else{
+            if(dStack.empty()){
+                return "格式错误";
+            }
             double a = dStack.top();
             dStack.pop();
             if(str == "+"){

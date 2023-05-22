@@ -289,7 +289,7 @@ infixToPostfix::infixToPostfix()
                     calOperator = calOperator + (digits.length() == 0 ? "10" : digits);
                 }
                 stackPush(opStack,result,calOperator);
-                addParentheses(expression,n + nbit);
+                int pn = addParentheses(expression,n + nbit);
                 n = n + nbit - 1;
                 prec = 2;
             }
